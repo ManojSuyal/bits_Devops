@@ -79,7 +79,8 @@ def send_email(bucket_name, object_key, object_size, object_type):
         Destinations=recipients,
         RawMessage={'Data': msg.as_string()}
     )
-###
+```
+
 
 Event Handler Details
 Lambda Function Trigger
@@ -90,12 +91,6 @@ Permissions
 IAM Role: Create or choose an IAM role with the following permissions:
 AmazonS3ReadOnlyAccess: Read-only access to S3 bucket
 AmazonSESFullAccess: Full access to Amazon SES for sending emails
-css
-Copy code
-
-This markdown format will display the code and information properly in a README.md file on GitHub. Let me know if you need further assistance!
-
-
 
 
 
