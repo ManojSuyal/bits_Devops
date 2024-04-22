@@ -1,16 +1,16 @@
-# DevOPs
+# Cloud
 
+##Assignment
 
-prepare the below project implemenation for me "1.	Using AWS lambda, write a program to monitor an S3 Uri. Whenever a user uploads data into the S3 storage, the program should capture the details. At the end of the day the program must send out an email to select users displaying the following information
+1.	Using AWS lambda, write a program to monitor an S3 Uri. Whenever a user uploads data into the S3 storage, the program should capture the details. At the end of the day the program must send out an email to select users displaying the following information
 a.	S3 Uri
 b.	Object Name
 c.	Object Size
 d.	Object type
 In addition to the above, the program should create a thumbnail and store it in the same uri in case the user uploads an image (.jpg/jpeg/png)
 "
-ChatGPT
-Sure, I can guide you through implementing this project using AWS Lambda, S3, and Simple Email Service (SES). Below are the steps you need to follow:
 
+#Step1 1
 Create an S3 Bucket: If you haven't already, create an S3 bucket where the user will upload data.
 Set up Lambda Function:
 Go to the AWS Lambda console.
