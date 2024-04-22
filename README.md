@@ -79,6 +79,8 @@ def send_email(bucket_name, object_key, object_size, object_type):
         Destinations=recipients,
         RawMessage={'Data': msg.as_string()}
     )
+###
+
 Event Handler Details
 Lambda Function Trigger
 Trigger: S3 Event
