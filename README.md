@@ -1,18 +1,7 @@
-# Cloud
 
-AWS Lambda Function for Monitoring S3 Uploads
-This AWS Lambda function monitors an S3 bucket for new uploads. When a user uploads data into the S3 storage, the function captures the details of the uploaded object and sends an email to select users at the end of the day with the following information:
+### Lambda Function Code
 
-S3 Uri
-Object Name
-Object Size
-Object Type
-Additionally, if the uploaded object is an image (JPEG, JPG, or PNG), the function creates a thumbnail and stores it in the same S3 URI.
-
-Implementation
-Lambda Function Code
-python
-Copy code
+```python
 import json
 import boto3
 import os
@@ -90,19 +79,21 @@ def send_email(bucket_name, object_key, object_size, object_type):
         Destinations=recipients,
         RawMessage={'Data': msg.as_string()}
     )
-Setting up the Lambda Function
-Go to the AWS Lambda console.
-Click on "Create function" and choose "Author from scratch".
-Give your function a name, choose the runtime as Python 3.8, and select an existing role or create a new one with necessary permissions to access S3 and SES.
-Copy and paste the provided code into the code editor.
-Save the function.
-Setting up S3 Event Trigger
-Go to your Lambda function.
-Under "Designer", click on "Add trigger".
-Choose S3 from the list of services.
-Configure the trigger to monitor the desired S3 bucket and event type (e.g., "All object create events").
-Save the trigger.
-Setting up SES
-Go to the AWS SES console.
-Verify sender and recipient email addresses.
-Request production access for your AWS SES account.
+Event Handler Details
+Lambda Function Trigger
+Trigger: S3 Event
+Event Type: All object create events
+Triggered by: Uploads to your S3 bucket
+Permissions
+IAM Role: Create or choose an IAM role with the following permissions:
+AmazonS3ReadOnlyAccess: Read-only access to S3 bucket
+AmazonSESFullAccess: Full access to Amazon SES for sending emails
+css
+Copy code
+
+This markdown format will display the code and information properly in a README.md file on GitHub. Let me know if you need further assistance!
+
+
+
+
+
