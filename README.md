@@ -83,7 +83,7 @@ def send_email(bucket_name, object_key, object_size, object_type):
 
 
 ###
-Event Handler Details.
+#Event Handler Details.
 Lambda Function Trigger.
 Trigger: S3 Event
 Event Type: All object create events
