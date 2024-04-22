@@ -1,6 +1,6 @@
 # Cloud
 
-##Assignment
+#Assignment
 
 1.	Using AWS lambda, write a program to monitor an S3 Uri. Whenever a user uploads data into the S3 storage, the program should capture the details. At the end of the day the program must send out an email to select users displaying the following information
 a.	S3 Uri
@@ -111,10 +111,10 @@ Save your Lambda function.
 Upload an object to your S3 bucket and check if you receive the email with the object details.
 This should get you started with the implementation. Let me know if you need further assistance!
 
-User
-Provide me role details for "Give your function a name, choose the runtime as Python 3.8, and select an existing role or create a new one with necessary permissions to access S3 and SES."
-ChatGPT
-Sure, here are the details for the IAM role you need to create:
+
+#Lamda Role creation
+
+here are the details for the IAM role you need to create:
 
 Create a New Role:
 Go to the IAM console: https://console.aws.amazon.com/iam/
@@ -134,22 +134,9 @@ Add a description if you want.
 Click on "Create role".
 That's it! Now you have a role with the necessary permissions for your Lambda function. You can select this role when creating your Lambda function.
 
-User
-What is ses?
-ChatGPT
-SES stands for Amazon Simple Email Service. It is a cloud-based email sending service designed to help digital marketers and application developers send marketing, notification, and transactional emails. SES is a reliable, scalable, and cost-effective way to send emails.
 
-With SES, you can:
 
-Send email using SMTP or through the SES API.
-Integrate SES with your applications to send notifications, transactional emails, and marketing messages.
-Monitor email sending activity and delivery metrics.
-In the context of your project, SES is used to send email notifications to select users with details about the objects uploaded to the S3 bucket.
-
-User
- Explain me lamda function line by line
-ChatGPT
-Sure, I'll explain the Lambda function code line by line:
+#Details of Lambda function code line by line:
 
 python
 Copy code
@@ -272,10 +259,8 @@ s3 is an S3 service client, which allows you to interact with Amazon S3 service.
 ses is an SES service client, which allows you to interact with Amazon SES (Simple Email Service) service.
 These are created as Boto3 service clients, which are objects that represent connections to AWS services. These clients provide methods that you can use to interact with the corresponding AWS services.
 
-User
-Explain event handlers like I don't know anything about python 
-ChatGPT
-Sure, I'll explain the event handler in the Lambda function in simple terms:
+
+#Event handler explanation in the Lambda function in simple terms:
 
 In Python, a function is a block of code that performs a specific task. An event handler is a function that gets executed when a particular event occurs.
 
